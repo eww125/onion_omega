@@ -1,5 +1,7 @@
 opkg update
-opkg install kmod-usb-storage-extras e2fsprogs kmod-fs-ext4
+opkg install kmod-usb-storage-extras
+opkg install e2fsprogs
+opkg install kmod-fs-ext4
 
 stupid instructions give this error:
   Collected errors:
