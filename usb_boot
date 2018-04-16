@@ -1,17 +1,4 @@
 opkg update
-opkg install e2fsprogs
+opkg install e2fsprogs kmod-usb-storage-extras kmod-fs-ext4 --nodeps
 
-opkg install kmod-usb-storage-extras --nodeps
-
-opkg install kmod-fs-ext4
-
-stupid instructions give this error:
-  Collected errors:
- * satisfy_dependencies_for: Cannot satisfy the following dependencies for kmod-usb-storage-extras:
- * 	kernel (= 4.4.74-1-a0095af4e7593c1bb0ffaf011d80b052) *
- * opkg_install_cmd: Cannot install package kmod-usb-storage-extras.
- * satisfy_dependencies_for: Cannot satisfy the following dependencies for kmod-fs-ext4:
- * 	kernel (= 4.4.74-1-a0095af4e7593c1bb0ffaf011d80b052) *
- * opkg_install_cmd: Cannot install package kmod-fs-ext4.
-    
  
