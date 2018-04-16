@@ -1,4 +1,6 @@
 opkg update
 opkg install e2fsprogs kmod-usb-storage-extras kmod-fs-ext4 --nodeps
-
- 
+umount /tmp/mounts/USB-A1
+mkfs.ext4 /dev/sda1
+mkdir /mnt/sda1
+mount /dev/sda1 /mnt/sda1
