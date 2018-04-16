@@ -4,3 +4,20 @@ umount /tmp/mounts/USB-A1
 mkfs.ext4 /dev/sda1
 mkdir /mnt/sda1
 mount /dev/sda1 /mnt/sda1
+mount /dev/sda1 /mnt/ ; tar -C /overlay -cvf - . | tar -C /mnt/ -xf - ; umount /mnt/
+opkg install block-mount
+block detect > /etc/config/fstab
+opkg install nano
+nano /etc/config/fstab
+
+Look for the line
+  option  target  '/mnt/<device name>'
+and change it to:
+  option target '/overlay'
+
+Then, look for the line:
+  option  enabled '0'
+and change it to
+  option  enabled '1'
+
+reboot
