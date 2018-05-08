@@ -1,1 +1,2 @@
 opkg install python-light pyOnionGpio git
+git clone git://github.com/eww125/onion_omega.git
